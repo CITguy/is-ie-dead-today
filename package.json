@@ -4,7 +4,7 @@
   "description": "Site source for [isinternetexplorerdead.today](http://isinternetexplorerdead.today).",
   "private": true,
   "scripts": {
-    "dev": "http-server"
+    "start": "http-server"
   },
   "repository": {
     "type": "git",
