@@ -1,0 +1,22 @@
+{
+  "name": "is-ie-dead-today",
+  "version": "1.0.0",
+  "description": "Site source for [isinternetexplorerdead.today](http://isinternetexplorerdead.today).",
+  "private": true,
+  "scripts": {
+    "dev": "http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CITguy/is-ie-dead-today.git"
+  },
+  "author": "Ryan Johnson <rhino.citguy@gmail.com> (http://citguy.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CITguy/is-ie-dead-today/issues"
+  },
+  "homepage": "http://isinternetexplorerdead.today",
+  "devDependencies": {
+    "http-server": "^0.11.1"
+  }
+}

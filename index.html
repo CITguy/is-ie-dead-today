@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Is Internet Explorer Dead Today?</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="favicon.png">
+
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <main v-cloak>
+    <h1>Is IE Dead?</h1>
+
+    <section class="isDead" v-if="isDead">
+      <h2 class="result">Yes!</h2>
+      <p>
+        Support for Windows 8.1 ended<br /> 
+        <a _target="blank" :href="WIN_LIFECYCLE_URL">
+          <time datetime="2023-01-10">January 10, 2023</time>
+        </a>.
+      </p>
+    </section>
+
+    <section class="isAlive" v-else>
+      <h2 class="result">No</h2>
+      <p>
+        IE doesn't run on Windows 10.<br />
+        It is still available on older versions of Windows.
+        Windows 8.1 support ends on 
+        <a target="_blank" :href="WIN_LIFECYCLE_URL">
+          <time datetime="2023-01-10">January 10, 2023</time>
+        </a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>Worldwide IE Usage</h2>
+      <p>
+        March 2018:
+        <a target="_blank" :href="GS_STATS_URL">around 3%</a>
+      </p>
+      <p class="small">
+        <span class="warning"></span>
+        Check browser usage for your own site.
+      </p>
+    </section>
+  </main>
+
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/moment/moment.js"></script>
+
+  <!-- add app script -->
+  <script src="app.js"></script>
+</body>
+</html>
