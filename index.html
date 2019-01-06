@@ -2,54 +2,65 @@
 <html lang="en">
 <head>
   <title>Is Internet Explorer Dead Today?</title>
+  <meta name="charset" content="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="favicon.png">
 
-  <link rel="stylesheet" href="app.css" />
+  <link rel="stylesheet" href="app.css">
 </head>
 <body>
-  <main v-cloak>
-    <h1>Is IE Dead?</h1>
+  <header id="head" aria-hidden="true">
+    :(
+  </header>
 
-    <section class="isDead" v-if="isDead">
-      <h2 class="result">Yes!</h2>
-      <p>
-        Support for Windows 8.1 ended<br /> 
-        <a _target="blank" :href="WIN_LIFECYCLE_URL">
-          <time datetime="2023-01-10">January 10, 2023</time>
-        </a>.
-      </p>
-    </section>
-
-    <section class="isAlive" v-else>
-      <h2 class="result">No</h2>
-      <p>
-        IE doesn't run on Windows 10.<br />
-        It is still available on older versions of Windows.
-        Windows 8.1 support ends on 
-        <a target="_blank" :href="WIN_LIFECYCLE_URL">
-          <time datetime="2023-01-10">January 10, 2023</time>
-        </a>.
-      </p>
-    </section>
-
-    <section>
-      <h2>Worldwide IE Usage</h2>
-      <p>
-        March 2018:
-        <a target="_blank" :href="GS_STATS_URL">around 3%</a>
-      </p>
-      <p class="small">
-        <span class="warning"></span>
-        Check browser usage for your own site.
-      </p>
-    </section>
+  <main id="main">
+    <h1>Internet Explorer Still Lives</h1>
+    <ul>
+      <li>
+        IE 11 is the only MS browser supported on older versions of
+        Windows
+        <ul>
+          <li>49% of global Windows users as of January 2019<sup>1</sup>.</li>
+        </ul>
+      </li>
+      <li>
+        IE 11 is only receiving <em>major</em> security updates.
+      </li>
+      <li>
+        IE 11 is available on Windows 10 for <i>backward compatibility</i>.
+      </li>
+      <li>
+        Microsoft Edge is <em>recommended</em> for Windows 10 users.
+      </li>
+      <li>
+        Extended support for Windows 7, SP1 ends
+        <time datetime="2020-01-04">January 4, 2020</time>.
+      </li>
+      <li>
+        Extended support for Windows 8.1 ends
+        <time datetime="2023-01-10">January 10, 2023</time>.
+      </li>
+    </ul>
   </main>
 
-  <script src="https://unpkg.com/vue/dist/vue.js"></script>
-  <script src="https://unpkg.com/moment/moment.js"></script>
-
-  <!-- add app script -->
-  <script src="app.js"></script>
+  <footer id="foot">
+    <ol>
+      <li>
+        <a href="http://gs.statcounter.com/windows-version-market-share/desktop/worldwide/">
+          http://gs.statcounter.com/windows-version-market-share/desktop/worldwide/
+        </a>
+      </li>
+      <li>
+        <a href="https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer">
+          https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer
+        </a>
+      </li>
+      <li>
+        <a href="https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet">
+          https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet
+        </a>
+      </li>
+    </ol>
+  </footer>
 </body>
 </html>

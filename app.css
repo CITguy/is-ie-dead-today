@@ -1,70 +1,86 @@
-html { 
-  box-sizing: border-box; 
+/* ----- RESETS ----- */
+html {
+  box-sizing: border-box;
   font-size: 16px;
-  font-family: sans-serif;
+  height: 100%;
 }
 
-*, *::before, *::after { 
-  box-sizing: inherit; 
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
-[v-cloak] {
-  display: none;
-}
-
-body { 
-  align-items: center;
-  background: linear-gradient(to top, #e6fbff, #fafafa 25%);
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  line-height: 1.5; 
-  padding: 3rem;
-}
-
-h1 { margin: 0; }
-h2 { margin: 0 0 0.75em; }
-
+footer,
+header,
 main {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
+  display: block;
 }
 
-/*
-main h1 {
-  margin: 0 0 1em;
-}
-*/
-
-section {
-  margin-top: 3rem;
+a {
+  background-color: transparent;
 }
 
-p {
+/* ----- BASE ----- */
+*:first-child {
+  margin-top: 0;
+}
+
+*:last-child {
+  margin-bottom: 0;
+}
+
+body {
+  background-color: hsl(212, 100%, 50%);
+  background-image: linear-gradient(to bottom, transparent 75%, rgba(0, 0, 0, 0.25) 95%);
+  color: #ffffff;
+  font-family: 'Segoe UI', 'Consolas', 'Lucida Console', sans-serif;
+  height: 100vh;
+  line-height: 1.5;
   margin: 0;
-  max-width: 45ch;
-  line-height: 2;
-}
-p:not(.result) {
-  color: #777;
-}
-p + p {
-  margin-top: 2em;
+  padding: 4rem;
 }
 
-.result {
-  font-style: italic;
-  text-transform: uppercase;
+a {
+  color: inherit;
 }
 
-.warning::before {
-  content: '\26a0';
+ol {
+  padding-left: 1em;
 }
 
-.small {
-  font-size: 0.75em;
+sup {
+  font-size: 0.5em;
+  vertical-align: super;
+}
+
+/* PARTS/COMPONENTS */
+#head {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+#main {
+  font-size: 1.5rem;
+}
+
+#foot {
+  bottom: 2rem;
+  font-size: 1rem;
+  font-weight: 300;
+  left: 4rem;
+  position: absolute;
+}
+
+/* ----- HELPERS ----- */
+
+/* ----- OVERRIDES ----- */
+@supports (display: grid) {
+  body {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  #foot {
+    position: static;
+  }
 }
