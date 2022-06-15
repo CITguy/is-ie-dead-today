@@ -29,9 +29,13 @@ a {
 }
 
 body {
-  background-color: hsl(212, 100%, 50%);
-  background-image: linear-gradient(to bottom, transparent 75%, rgba(0, 0, 0, 0.25) 95%);
-  color: #ffffff;
+  background: linear-gradient(to bottom right,
+    #3bd961 10%,
+    #0eb7f5 40%,
+    #0eb7f5 60%,
+    #00376c
+  );
+  color: #000;
   font-family: 'Segoe UI', 'Consolas', 'Lucida Console', sans-serif;
   height: 100vh;
   line-height: 1.5;
@@ -68,6 +72,9 @@ sup {
   font-weight: 300;
   left: 4rem;
   position: absolute;
+}
+#foot :any-link {
+  color: #000;
 }
 
 /* ----- HELPERS ----- */
